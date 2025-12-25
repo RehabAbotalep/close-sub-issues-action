@@ -19,6 +19,9 @@
   ],
   "author": "Rehab Ragab",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {
     "@vercel/ncc": "^0.38.4",
     "jest": "^30.2.0"
