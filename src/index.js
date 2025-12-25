@@ -24,6 +24,8 @@ async function run() {
     core.info(`Fetching sub-issues for parent issue #${issueNumber} in ${repository}...`);
     
     // Fetch sub-issues for the parent issue using GitHub's Sub-issues API
+    // This is an official GitHub API endpoint supported by Octokit
+    // See: https://docs.github.com/en/issues/tracking-your-work-with-issues/about-tasklists
     // Uses pagination to handle repositories with many sub-issues
     const subIssues = [];
     let page = 1;
