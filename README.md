@@ -19,17 +19,32 @@ on:
   issues:
     types: [closed]
 
+permissions:
+  issues: write      # Required to close issues and add comments
+  contents: read     # Required to access repository
+
 jobs:
   close-sub-issues:
     runs-on: ubuntu-latest
     steps:
       - name: Close Sub-Issues
-        uses: RehabAbotalep/close-sub-issues-action@v1
+        uses: RehabAbotalep/close-sub-issues-action@@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           issue_number: ${{ github.event.issue.number }}
           repository: ${{ github.repository }}
 ```
+
+## Permissions
+
+This action requires the following permissions to work correctly:
+
+| Permission | Reason |
+|------------|--------|
+| `issues: write` | Required to close sub-issues and add comments to the parent issue |
+| `contents: read` | Required to access repository information |
+
+> **Note:** If you encounter a `403 - Resource not accessible by integration` error, make sure you've added the `permissions` block to your workflow file as shown above.
 
 ## Inputs
 
