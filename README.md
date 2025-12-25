@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Close Sub-Issues
-        uses: RehabAbotalep/close-sub-issues-action@v1.0.0
+        uses: RehabAbotalep/close-sub-issues-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           issue_number: ${{ github.event.issue.number }}
