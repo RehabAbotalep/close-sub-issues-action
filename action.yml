@@ -1,0 +1,30 @@
+name: Close Sub-Issues Automatically
+description: Automatically closes all sub-issues when their parent issue is closed, keeping your issue hierarchy clean and in sync.
+author: Rehab Ragab
+branding:
+  icon: "check-circle"
+  color: "green"
+
+inputs:
+  github_token:
+    description: "GitHub token for authentication."
+    required: true
+    type: string
+  issue_number:
+    description: "The issue number of the parent issue."
+    required: true
+    type: string
+  repository:
+    description: "The repository in 'owner/repo' format."
+    required: true
+    type: string
+
+outputs:
+  closed_count:
+    description: "The number of sub-issues that were successfully closed."
+  total_count:
+    description: "The total number of sub-issues found."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

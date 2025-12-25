@@ -1,0 +1,30 @@
+{
+  "name": "close-sub-issues-action",
+  "version": "1.0.0",
+  "description": "Automatically closes all sub-issues when their parent issue is closed",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RehabAbotalep/close-sub-issues-action.git"
+  },
+  "keywords": [
+    "github-action",
+    "sub-issues",
+    "issues",
+    "automation"
+  ],
+  "author": "Rehab Ragab",
+  "license": "MIT",
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4",
+    "jest": "^30.2.0"
+  },
+  "dependencies": {
+    "@actions/core": "^2.0.1",
+    "@octokit/rest": "^21.1.1"
+  }
+}
