@@ -2,11 +2,13 @@
 
 Automatically closes all sub-issues associated with a parent issue when the parent is closed.
 
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Ready-blue) ![License](https://img.shields.io/badge/License-MIT-green)
+
 ## Features
 
 - Automatically closes all open sub-issues when parent issue is closed
 - Adds a summary comment to the parent issue listing closed sub-issues
-- Handles pagination for issues with many sub-issues
+- Handles large numbers of sub-issues safely with pagination
 
 ## Usage
 
@@ -63,7 +65,7 @@ This action requires the following permissions to work correctly:
 
 ## Example
 
-When you close a parent issue with sub-issues, this action will:
+When a parent issue is closed, this action will:
 
 1. Find all open sub-issues
 2. Close each sub-issue
