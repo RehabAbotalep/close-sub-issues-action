@@ -70,7 +70,9 @@ When a parent issue is closed, this action will:
 1. Find all open sub-issues
 2. Close each sub-issue
 3. Add a comment to the parent issue:
-   > ✅ Automatically closed the following sub-issues: #2 #3 #4
+```
+✅ Automatically closed the following sub-issues: #2 #3 #4
+```
 
 ## License
 
